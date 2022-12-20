@@ -1,0 +1,27 @@
+@import './../../../../styles.scss';
+
+:host {
+    flex-grow: 1;
+}
+
+.#{$pre}-all-products {
+    &-count {
+        font-size: 1.1rem;
+        background: #F7F9FB;
+        padding: 10px;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+        display: flex;
+    }
+
+    a {
+        color: black;
+    
+        &:hover {
+            cursor: pointer;
+            border: unset;
+            color: powderblue;
+        }
+    }
+}
+

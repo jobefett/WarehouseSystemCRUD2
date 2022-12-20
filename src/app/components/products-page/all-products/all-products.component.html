@@ -1,0 +1,12 @@
+<div class="ws-all-products">
+    <div *ngIf="productsService.products$ | async as products; else indicator">
+        <div class="ws-all-products-count">Total count: {{ products.length }} products</div>
+        <app-product-item
+            *ngFor="let product of products"
+            [productItem]="product">
+        </app-product-item>
+    </div>
+    <ng-template #indicator>
+        Loading...
+    </ng-template>
+</div>

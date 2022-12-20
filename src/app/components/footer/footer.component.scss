@@ -1,0 +1,16 @@
+@import './../../../styles.scss';
+
+.#{$pre}-footer {
+    background: #212121;
+
+    &__row {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-top: 48px;
+    }
+}

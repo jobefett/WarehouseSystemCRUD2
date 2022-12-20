@@ -1,0 +1,60 @@
+@import './../../../../styles.scss';
+
+:host {
+    min-width: 250px;
+}
+
+.#{$pre}-filters {
+    margin-right: 5px;
+    font-size: 1.1rem;
+
+    a {
+        display: inline-block;
+        color: black;
+        padding: 5px;
+    
+        &:hover {
+            cursor: pointer;
+            border: unset;
+            color: powderblue;
+        }
+    }
+
+    &-add-product {
+        font-size: 1.1rem;
+        background: powderblue;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        display: flex;
+
+        a {
+            width: 100%;
+            padding: 10px;
+        
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    &-form {
+        input {
+            font-size: 16px;
+            line-height: 28px;
+            padding: 8px 16px;
+            width: 100%;
+            min-height: 44px;
+            border: unset;
+            border-radius: 4px;
+            outline-color: powderblue;
+            background-color: #F7F9FB;
+        }
+    }
+
+    &-form,
+    &-floors,
+    &-sections,
+    &-reset {
+        margin-bottom: 20px;
+    }
+}

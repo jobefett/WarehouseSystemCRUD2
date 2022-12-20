@@ -1,0 +1,9 @@
+@import './../../../styles.scss';
+
+.#{$pre}-products-page {
+    display: flex;
+
+    @media only screen and (max-width: 640px) {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,32 @@
+@import './../../../styles.scss';
+
+.#{$pre}-header {
+    background-image: url('https://www.holycode.rs/wp-content/uploads/2020/01/header-image.png');
+
+    &__row {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 20px;
+
+        @media only screen and (max-width: 480px) {
+            flex-direction: column;
+        }
+    }
+
+    h1 {
+        flex-basis: 30%;
+    }
+
+    &__navigation {
+        a {
+            font-family: "Oswald", sans-serif;
+            margin-left: 20px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }   
+    }
+}

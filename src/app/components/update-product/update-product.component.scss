@@ -1,0 +1,48 @@
+@import './../../../styles.scss';
+
+.#{$pre}-update-product {
+    &-saving {
+        color: red;
+    }
+
+    &-form {
+        label {
+            position: relative;
+            display: block;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        input {
+            font-size: 16px;
+            line-height: 28px;
+            padding: 8px 16px;
+            width: 100%;
+            min-height: 44px;
+            border: unset;
+            border-radius: 4px;
+            outline-color: powderblue;
+            background-color: #F7F9FB;
+
+            &[type="submit"] {
+                background-color: powderblue;
+                color: black;
+                font-weight: bold;
+                cursor: pointer;
+
+                &:disabled {
+                    color: darkgrey;
+                    cursor: unset;
+                }
+            }
+        }
+    }
+
+    &__error {
+        color: red;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+    }
+}

@@ -1,0 +1,32 @@
+<div class="ws-update-product">
+    <h2 *ngIf="dataTitle; else addProduct">Update product</h2>
+    <ng-template #addProduct>
+        <h2>Add Product</h2>
+    </ng-template>
+    <div class="ws-update-product-saving" *ngIf="loading">Saving...</div>
+    <div class="ws-update-product-form">
+        <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
+            <label>
+                Code:
+                <input type="text" formControlName="code" placeholder="Enter code">
+                <span class="ws-update-product__error" *ngIf="code.invalid && code.touched">Code is not valid</span>
+            </label>
+            <label>
+                Quantity:
+                <input type="number" formControlName="quantity" placeholder="Enter quantity">
+                <span class="ws-update-product__error" *ngIf="quantity.invalid && quantity.touched && quantity">Quantity is not valid</span>
+            </label>
+            <label>
+                Floor:
+                <input type="number" formControlName="floor" placeholder="Enter floor">
+                <span class="ws-update-product__error" *ngIf="floor.invalid && floor.touched">Floor is not valid</span>
+            </label>
+            <label>
+                Section:
+                <input type="number" formControlName="section" placeholder="Enter Section">
+                <span class="ws-update-product__error" *ngIf="section.invalid && section.touched">Section is not valid</span>
+            </label>
+            <input type="submit" [disabled]="productsForm.invalid">
+        </form>
+    </div>
+</div>

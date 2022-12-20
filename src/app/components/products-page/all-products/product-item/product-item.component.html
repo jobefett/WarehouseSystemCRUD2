@@ -1,0 +1,17 @@
+<div class="ws-product-item">
+    <div class="ws-product-item-labels">
+        <span>Code</span>
+        <span>Quantity</span>
+        <span>Location</span>
+    </div>
+    <div class="ws-product-item-data">
+        <span class="ws-product-item-data-code">{{ productItem.code }}</span>
+        <span class="ws-product-item-data-quantity">{{ productItem.quantity }}</span>
+        <span class="ws-product-item-data-location">{{ productItem.floor }} / {{ productItem.section }}</span>
+    </div>
+    <div class="ws-product-item-delete" *ngIf="loading && deleteFlag">Deleting...</div>
+    <div class="ws-product-item-options">
+        <a (click)="onDelete(productItem)">Delete</a>
+        <a (click)="onUpdate(productItem)">Update</a>
+    </div>
+</div>

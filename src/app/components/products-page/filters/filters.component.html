@@ -1,0 +1,25 @@
+<div class="ws-filters">
+    <div class="ws-filters-add-product">
+        <a [routerLink]="['/products', 'add']">Add new product</a>
+    </div>
+    <div class="ws-filters-form">
+        <form [formGroup]="filterForm">Filter by code:
+            <input type="text" placeholder="Enter code" formControlName="code" />
+        </form>
+    </div>
+    <div class="ws-filters-floors">
+        <span>Filter per floors:</span>
+        <div *ngFor="let floor of counter(maxNumbOfFloors); let i = index">
+            <a (click)="filterProductPerFloor(i)">Floor {{ i+1 }}</a>
+        </div>
+    </div>
+    <div class="ws-filters-sections">
+        <span>Filter per sections:</span>
+        <div *ngFor="let section of counter(maxNumbOfSections); let i = index">
+            <a (click)="filterProductPerSection(i)">Section {{ i+1 }}</a>
+        </div>
+    </div>
+    <div class="ws-filters-reset">
+        <a (click)="resetResults()">Reset results</a>
+    </div>
+</div>

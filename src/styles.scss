@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+// Prefix
+$pre: 'ws';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "ProximaNova",sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: .5px;
+    line-height: 1.4;
+}
+
+a {
+    color: white;
+    text-decoration: inherit;
+
+    &:hover {
+        color:powderblue;
+        border-bottom: 3px solid powderblue;
+    }
+}
+
+// Fonts
+@font-face {
+    font-family: 'ProximaNova';
+    src: url("/assets/fonts/ProximaNova-Medium.woff2") format("woff2"),
+    url("/assets/fonts/ProximaNova-Medium.woff") format("woff"),url("/assets/fonts/ProximaNova-Medium.otf") format("opentype");
+    font-display: fallback;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('/assets/fonts/oswald-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
